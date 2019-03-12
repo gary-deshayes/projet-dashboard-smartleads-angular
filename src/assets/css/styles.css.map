@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,+EAA+E;ACA/E,IAAK;EACD,MAAM,EAAE,MAAM",
-"sources": ["../../styles.scss","../../app/app.component.scss"],
+"mappings": "AAAA,+EAA+E;ACA/E,IAAK;EACD,MAAM,EAAE,MAAM;;ACDlB,IAAK;EACD,gBAAgB,EAAE,IAAI",
+"sources": ["../../styles.scss","../../app/app.component.scss","../../app/dashboard/dashboard.component.scss"],
 "names": [],
 "file": "styles.css"
 }

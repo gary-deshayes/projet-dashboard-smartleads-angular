@@ -4,8 +4,20 @@
 @import 'app/dashboard/dashboard.component';
 @import 'app/performance-map/performance-map.component';
 
+html {
+    font-size: 12px;
+}
+
 .row {
-    margin: 0 30px;
+    margin: 30px 30px;
+}
+
+i {
+    color: #D9D9D9;
+}
+
+p {
+    margin: 0;
 }
 
 .content {
@@ -20,5 +32,6 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 0 10px;
+    padding: 15px 10px;
+    border-bottom: 1px grey solid;
 }

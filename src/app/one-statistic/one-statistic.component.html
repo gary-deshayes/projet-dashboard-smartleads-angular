@@ -1,14 +1,17 @@
 <div class="content">
   <div class="partSup">
     <i class="fas fa-user-friends fa-lg"></i>
-    <span class="taux">
-      +12%
-    </span>
+    <div *ngIf="data != null">
+      <span class="taux" *ngIf="data.taux != undefined">
+        +12%
+      </span>
+    </div>
+
   </div>
-  <span class="effectif">
-    32
+  <span class="effectif" *ngIf="data != null">
+    {{data.value}}
   </span>
   <span id="libelle">
-    Nouveaux contacts
+    {{libelle}}
   </span>
 </div>

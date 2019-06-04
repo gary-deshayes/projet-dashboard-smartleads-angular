@@ -1,0 +1,8 @@
+<div>
+  <label>Email</label>
+  <input #username name="username" value="" type="text">
+  <label>Password</label>
+  <input #password name="password" value="" type="password">
+  <button (click)="connexion(username.value, password.value)">Connexion</button>
+  <p id="errorMessage"></p>
+</div>

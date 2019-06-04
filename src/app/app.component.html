@@ -1,1 +1,6 @@
-<app-dashboard></app-dashboard>
+<div *ngIf="apiConnection.getIfConnected() == true; else connection">
+        <app-dashboard [apiConnection]='apiConnection'></app-dashboard>
+</div>
+<ng-template #connection>
+        <app-connection [apiConnection]='apiConnection'></app-connection>
+</ng-template>

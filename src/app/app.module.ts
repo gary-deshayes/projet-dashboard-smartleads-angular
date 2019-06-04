@@ -10,6 +10,8 @@ import { OneStatisticComponent } from './one-statistic/one-statistic.component';
 import { PerfOperationComponent } from './perf-operation/perf-operation.component';
 import { MonitoringComponent } from './monitoring/monitoring.component';
 import { QualityCrmComponent } from './quality-crm/quality-crm.component';
+import { ConnectionComponent } from './connection/connection.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { QualityCrmComponent } from './quality-crm/quality-crm.component';
     OneStatisticComponent,
     PerfOperationComponent,
     MonitoringComponent,
-    QualityCrmComponent
+    QualityCrmComponent,
+    ConnectionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

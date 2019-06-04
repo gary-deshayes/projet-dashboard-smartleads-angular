@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ApiConnectionService } from './../api-connection.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-statistics',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatisticsComponent implements OnInit {
 
+  @Input() apiConnection: ApiConnectionService;
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.apiConnection);
   }
+
+  ngAfterViewInit() {
+    
+  }
+
+  
 
 }

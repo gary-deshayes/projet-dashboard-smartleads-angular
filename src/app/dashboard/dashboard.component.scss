@@ -1,3 +1,14 @@
+.col- {
+    &left {
+        width: 35%;
+        margin-right: 40px;
+    }
+
+    &right {
+        width: 60%;
+    }
+}
+
 .presentation {
     margin-left: 45px;
     display: flex;
@@ -24,11 +35,11 @@ h2 {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .logo {
-    height: 120px;
+    width: 200px;
 }
 
 .statsPerf{

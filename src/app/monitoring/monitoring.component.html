@@ -1,3 +1,41 @@
-<p>
-  monitoring works!
-</p>
+<div class="content">
+    <div class="dash-window-block">
+  <div class="dash-indicateur-perf">
+      <div class="dash-top">
+          <h4>Suivi des indicateurs de performance</h4>
+          <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <div class="indic-perf">
+          <div class="row">
+              <div class="col-3">
+                  <div class="menu-indicateur-perf">
+                      <ul class="nav nav-pills" id="indic-pills-tab" role="tablist">
+                          <li class="nav-item">
+                              <a aria-controls="pills-today" aria-selected="true" class="nav-link disabled" data-toggle="pill" href="#pills-operations" id="pills-operations-tab" role="tab">Opérations</a>
+                          </li>
+                          <li class="nav-item">
+                              <a aria-controls="pills-week" aria-selected="false" class="nav-link active" data-toggle="pill" href="#pills-contacts-new" id="pills-contacts-new-tab" role="tab">Nouveaux contacts</a>
+                          </li>
+                          <li class="nav-item">
+                              <a aria-controls="pills-week" aria-selected="false" class="nav-link disabled" data-toggle="pill" href="#pills-contacts-maj" id="pills-contacts-maj-tab" role="tab">Contacts mis à jour</a>
+                          </li>
+                          <li class="nav-item">
+                              <a aria-controls="pills-week" aria-selected="false" class="nav-link disabled" data-toggle="pill" href="#pills-contacts-lost" id="pills-contacts-lost-tab" role="tab">Contacts perdus</a>
+                          </li>
+                          <li class="nav-item">
+                              <a aria-controls="pills-week" aria-selected="false" class="nav-link disabled" data-toggle="pill" href="#pills-new-company" id="pills-new-company-tab" role="tab">Nouvelles entreprises</a>
+                          </li>
+                          <li class="nav-item">
+                              <a aria-controls="pills-week" aria-selected="false" class="nav-link disabled" data-toggle="pill" href="#pills-new-email" id="pills-new-email-tab" role="tab">Nouveaux emails</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-9">
+                  <div id="chart-line"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>

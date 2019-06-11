@@ -1,0 +1,20 @@
+<div class="login-page">
+  <div class="block-login">
+
+    <img class="logo" src="/assets/img/logoHafa.png">
+
+    <div class="element-login">
+        <label>E-mail</label>
+        <input #username name="username" value="" type="text">
+    </div>
+    <div class="element-login">
+        <label>Mot de passe</label>
+        <input #password name="password" value="" type="password">
+    </div>
+
+    <button (click)="connexion(username.value, password.value)">Connexion</button>
+    <p id="errorMessage"></p>
+
+    <p class="footer">Smartleads © tous droits réservés</p>
+  </div>
+</div>

@@ -6,7 +6,7 @@
           <a class="retour" href=#>RETOUR</a>
       </div>
       <div class="presentation">
-          <h3>Mercedi 23 septembre 2019</h3>
+          <h3>{{ dateJour }}</h3>
           <div class="titre">
               <h2>PERFORMANCE COMMERCIALE</h2>
               <h1>TABLEAU DE BORD</h1>
@@ -20,7 +20,7 @@
   </div>
   <div class="col-right">
     <div class="statsPerf">
-        <app-statistics></app-statistics>
+        <app-statistics [apiConnection]='apiConnection'></app-statistics>
         <app-perf-operation></app-perf-operation>
     </div>
     <app-quality-crm></app-quality-crm>

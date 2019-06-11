@@ -15,10 +15,11 @@
             }
             
             a {
-                padding: 20px;
+                padding: 15px;
                 color: #999999;
                 font-weight: 500;
                 border-radius: 0;
+                font-size: 10px;
 
                 &.active {
                     background-color: transparent;
@@ -30,7 +31,6 @@
 }
 
 .indic-perf {
-    margin-top: 20px;
     .row {
         margin: 0;
 

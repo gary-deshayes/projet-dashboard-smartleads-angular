@@ -12,7 +12,7 @@ export class MonitoringComponent implements OnInit {
   ngOnInit() {
         var options = {
         chart: {
-            height: 350,
+            height: 270,
             type: 'line',
             shadow: {
                 enabled: true,

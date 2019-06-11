@@ -85,6 +85,11 @@ export class OneStatisticComponent implements OnInit {
 
     },
       (error) => {
+        if(error.status == 401){
+          this.apiConnection.deconnected();
+          localStorage.setItem('token', undefined);
+
+        }
 
       this.loading = false;
 

@@ -22,13 +22,6 @@
         <app-statistics [apiConnection]='apiConnection'></app-statistics>
         <app-perf-operation></app-perf-operation>
     </div>
-    <app-quality-crm></app-quality-crm>
-  </div>
-</div>
-
-<div class="modal fade show" id="modalLoader" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <label>Chargement des données en cours.</label>
-    <img src="../../assets/loader.gif"/>
+    <app-quality-crm [apiConnection]='apiConnection'></app-quality-crm>
   </div>
 </div>

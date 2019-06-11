@@ -3,7 +3,14 @@
     <i class="{{logo}}" *ngIf="logo != null"></i>
     <div *ngIf="data != null">
       <span class="taux" *ngIf="data.pourcent != undefined">
-        {{data.pourcent}}%
+        <div *ngIf="data.pourcent < 0 " class="negative-percent else positive">
+          {{data.pourcent}}%
+        </div>
+        <ng-template #loader>
+          {{data.pourcent}}%
+
+
+        </ng-template>
       </span>
     </div>
 

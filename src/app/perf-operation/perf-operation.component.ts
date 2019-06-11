@@ -16,7 +16,7 @@ export class PerfOperationComponent implements OnInit {
     var options = {
       chart: {
           type: 'donut',
-          height: 300
+          height: 200
       },
       dataLabels: {
           enabled: false,
@@ -24,7 +24,7 @@ export class PerfOperationComponent implements OnInit {
       labels: ['Ouvert', 'Non ouvert', 'Délivré', 'Ajout/Mise à jour des données'],
       plotOptions: {
           pie: {
-              size: 80,
+              size: 70,
               donut: {
                   size: '80%'
               }
@@ -37,7 +37,7 @@ export class PerfOperationComponent implements OnInit {
           showForZeroSeries: true,
           position: 'bottom',
           horizontalAlign: 'left',
-          offsetY: 30,
+          offsetY: 0,
           itemMargin: {
               horizontal: 0,
               vertical: 20

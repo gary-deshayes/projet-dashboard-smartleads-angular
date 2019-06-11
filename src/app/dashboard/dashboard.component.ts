@@ -33,25 +33,6 @@ export class DashboardComponent implements OnInit {
 
     this.dateJour = jourLettre + " " + jourNombre.toString() + " " + mois + " " + annee.toString();
 
-    if (this.apiConnection.getIfConnected()) {
-      this.getContactsActifs();
-
-    }
-  }
-
-  getContactsActifs() {
-    let data: any;
-    this.apiConnection.getData("api/contacts/totalActif").subscribe((dataApi) => {
-      data = dataApi;
-    },
-      (error) => {
-
-      },
-      () => {
-
-        this.statistiques['contacts_actives'] = data
-        console.log(this.statistiques);
-      });
   }
 
 }

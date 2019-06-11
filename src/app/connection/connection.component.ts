@@ -10,27 +10,39 @@ export class ConnectionComponent implements OnInit {
 
   @Input() apiConnection: ApiConnectionService;
 
+  private error = false;
+  private errorMessage: any;
+
   constructor() {
   }
 
   ngOnInit() {
-    console.log(this.apiConnection);
 
   }
 
   connexion(username, password) {
+    
 
-    let errorMessage = document.getElementById("errorMessage");
+
     if (username == "" && password == "") {
-      errorMessage.textContent = "Veuillez saisir les deux champs";
+      this.error = true;
+      this.errorMessage = "Veuillez saisir les deux champs";
+
     } else if (username == "") {
-      errorMessage.textContent = "Veuillez saisir l'email";
+      this.error = true;
+      this.errorMessage = "Veuillez saisir l'email";
 
     } else if (password == "") {
-      errorMessage.textContent = "Veuillez saisir le mot de passe";
+      this.error = true;
+
+      this.errorMessage = "Veuillez saisir le mot de passe";
 
     } else {
+      this.error = false;
+      this.errorMessage = undefined;
       this.apiConnection.getToken(username, password);
     }
+    console.log(this.error);
+    console.log(this.errorMessage);
   }
 }

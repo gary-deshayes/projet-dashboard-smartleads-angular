@@ -8,6 +8,8 @@ import { HttpHeaders } from '@angular/common/http';
 export class ApiConnectionService {
 
   private connected = false;
+  private loading = false;
+  private errorConnection: any;
 
   private token = "";
 
@@ -18,38 +20,48 @@ export class ApiConnectionService {
   }
 
   getToken(username, password) {
-    let retour = 0;
+    
     let json = '{"username":"' + username + '", "password" : "' + password + '"}';
     let obj = JSON.parse(json);
-    console.log(obj);
     let httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
       observe: 'response' as 'response'
     };
+    this.loading = true;
     this.http.post('http://127.0.0.1:8000/api/token/generate', obj, httpOptions).subscribe(data => {
-      console.log(data);
+      this.loading = false;
 
       //Connexion réussie
       if (data.status == 200) {
         this.connected = true;
-        retour = 1;
         this.token = data.body["token"];
       } else {
         this.connected == false;
-        retour = -1;
       }
 
     },
       (error) => {
+        if (error.status == 401) {
+          this.errorConnection = "Identifiant invalide, veuillez réessayer.";
 
+        }
+        if (error.status == 0 || error.status == 500) {
+          this.errorConnection = "Le serveur ne réponds pas, veuillez contacter un administrateur.";
+
+        }
+        this.loading = false;
 
       },
       () => {
         console.log(this.token);
-        console.log(this.connected);
+        this.loading = false;
+
       });
 
-    return retour;
+  }
+
+  public getErrorMessage() {
+    return this.errorConnection;
   }
 
   public getIfConnected() {
@@ -57,15 +69,21 @@ export class ApiConnectionService {
   }
 
 
-  public getData(url){
-    console.log(this.lien + url);
+  public getData(url) {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json',
+        'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + this.token
       })
     };
 
     return this.http.get(this.lien + url, httpOptions)
+  }
+
+  public getLoading(): boolean {
+    return this.loading;
+  }
+  public setLoading(loading) {
+    this.loading = loading;
   }
 }

@@ -15,6 +15,7 @@ export class OneStatisticComponent implements OnInit {
   private data: any;
   private libelle: any;
   private logo: any;
+  private loading = false;
 
 
 
@@ -28,25 +29,25 @@ export class OneStatisticComponent implements OnInit {
       this.libelle = "Nouveaux contacts";
       this.url = "api/contacts/newContactsSince/month";
       this.getDataStats();
-      this.logo = null;
+      this.logo = "fas fa-user-friends fa-lg";
     }
     if (this.dataToCall == 2) {
       this.libelle = "Nouvelles entreprises";
       this.url = "api/company/newCompaniesSince/month";
       this.getDataStats();
-      this.logo = null;
+      this.logo = "fas fa-building fa-lg";
     }
     if (this.dataToCall == 3) {
       this.libelle = "Nouveaux emails";
       this.url = "api/operationsent/newMailsSince/month";
       this.getDataStats();
-      this.logo = null;
+      this.logo = "fas fa-envelope fa-lg";
     }
     if (this.dataToCall == 4) {
       this.libelle = "Opérations actives";
       this.url = "api/operations/operationsActiveSince/month";
       this.getDataStats();
-      this.logo = null;
+      this.logo = "fas fa-star fa-lg";
     }
     if (this.dataToCall == 5) {
       this.libelle = "Contacts actifs";
@@ -76,16 +77,21 @@ export class OneStatisticComponent implements OnInit {
   }
 
   getDataStats() {
+    this.loading = true;
     this.apiConnection.getData(this.url).subscribe((dataApi) => {
       this.data = dataApi;
+      this.loading = false;
+
+
     },
       (error) => {
 
+      this.loading = false;
+
       },
       () => {
-
-        console.log(this.data);
-      });
+        this.loading = false;
+    });
   }
 
 }

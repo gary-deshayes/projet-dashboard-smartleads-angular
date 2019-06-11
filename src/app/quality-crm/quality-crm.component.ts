@@ -1,3 +1,4 @@
+import 'apexcharts';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -50,14 +51,14 @@ export class QualityCrmComponent implements OnInit {
       stroke: {
           lineCap: "round",
       },
-  }
-  
-  var chart = new ApexCharts(
-      document.querySelector("#chart-circle"),
-      options
-  );
-  
-  chart.render();
+    }
+    
+    var chart = new ApexCharts(
+        document.querySelector("#chart-circle"),
+        options
+    );
+    
+    chart.render();
   }
 
 }

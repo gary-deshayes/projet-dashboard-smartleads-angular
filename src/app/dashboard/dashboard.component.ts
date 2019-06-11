@@ -11,6 +11,8 @@ export class DashboardComponent implements OnInit {
 
   private statistiques: any = {};
 
+  private dateJour: any;
+
   @Input() apiConnection: ApiConnectionService;
 
   logoHafa = "../../assets/img/logoHafa.png";
@@ -18,8 +20,22 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
+    let tab_days = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+    let tab_month = new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+
+    let now = new Date();
+
+    let annee = now.getFullYear();
+    let mois = tab_month[now.getMonth()];
+    let jourNombre = now.getDate();
+    let jourLettre = tab_days[now.getDay()];
+
+    this.dateJour = jourLettre + " " + jourNombre.toString() + " " + mois + " " + annee.toString();
+
     if (this.apiConnection.getIfConnected()) {
       this.getContactsActifs();
+
     }
   }
 
@@ -32,7 +48,7 @@ export class DashboardComponent implements OnInit {
 
       },
       () => {
-        
+
         this.statistiques['contacts_actives'] = data
         console.log(this.statistiques);
       });

@@ -10,6 +10,7 @@ export class AppComponent  implements OnInit {
   title = 'projet-dashboard-smartleads-angular';
 
   constructor(private apiConnection: ApiConnectionService) { 
+    
 
     console.log(apiConnection.getIfConnected());
 

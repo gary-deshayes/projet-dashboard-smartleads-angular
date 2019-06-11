@@ -14,6 +14,7 @@ export class OneStatisticComponent implements OnInit {
   private url: any;
   private data: any;
   private libelle: any;
+  private logo: any;
 
 
 
@@ -23,10 +24,53 @@ export class OneStatisticComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.dataToCall == 1) {
+      this.libelle = "Nouveaux contacts";
+      this.url = "api/contacts/newContactsSince/month";
+      this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 2) {
+      this.libelle = "Nouvelles entreprises";
+      this.url = "api/company/newCompaniesSince/month";
+      this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 3) {
+      this.libelle = "Nouveaux emails";
+      this.url = "api/operationsent/newMailsSince/month";
+      this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 4) {
+      this.libelle = "Opérations actives";
+      this.url = "api/operations/operationsActiveSince/month";
+      this.getDataStats();
+      this.logo = null;
+    }
     if (this.dataToCall == 5) {
       this.libelle = "Contacts actifs";
       this.url = "api/contacts/totalActif";
       this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 6) {
+      this.libelle = "Entreprises actives";
+      this.url = "api/company/totalActif";
+      this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 7) {
+      this.libelle = "Emails";
+      this.url = "api/operationsent/totalMails";
+      this.getDataStats();
+      this.logo = null;
+    }
+    if (this.dataToCall == 8) {
+      this.libelle = "Opérations réalisées";
+      this.url = "api/operations/operationsRealized";
+      this.getDataStats();
+      this.logo = null;
     }
 
   }
@@ -40,7 +84,7 @@ export class OneStatisticComponent implements OnInit {
       },
       () => {
 
-        console.log(this.data.value);
+        console.log(this.data);
       });
   }
 

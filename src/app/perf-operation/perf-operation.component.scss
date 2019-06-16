@@ -1,13 +1,9 @@
-.content-stat {
-    height: 275px;
-    width: 295px;
-    margin-top: 10px;
-    margin-left: 20px;
+#chart {
+    min-height: 245px !important;
+    width: 300px;
 
-    .perf {
-        font-size: 14px;
-        font-weight: 600;
-        color: rgb(114, 114, 114);
-        margin-left:25px;
+    .apexcharts-legend-text {
+        margin-left: 10px;
+        font-weight: bold;
     }
 }

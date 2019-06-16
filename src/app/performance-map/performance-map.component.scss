@@ -1,8 +1,12 @@
 .dash-france-map {
+    height: 100%;
 
     .france-map {
-        svg {
-            margin-left: -60px;
+        height: 100%;
+        
+        .svg-france {
+            width: 130%;
+            margin-left: -40px;
         }
 
         .score {

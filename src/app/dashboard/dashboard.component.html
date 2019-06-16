@@ -5,7 +5,7 @@
           <img class="logo" [src]="logoHafa">
       </div>
       <div class="presentation">
-          <h3>Mercedi 23 septembre 2019</h3>
+          <h3>{{ dateJour }}</h3>
           <div class="titre">
               <h2>PERFORMANCE COMMERCIALE</h2>
               <h1>TABLEAU DE BORD</h1>
@@ -22,6 +22,14 @@
         <app-statistics [apiConnection]='apiConnection'></app-statistics>
         <app-perf-operation></app-perf-operation>
     </div>
-    <app-quality-crm></app-quality-crm>
+    <app-monitoring></app-monitoring>
+    <app-quality-crm [apiConnection]='apiConnection'></app-quality-crm>
+  </div>
+</div>
+
+<div class="modal fade show" id="modalLoader" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <label>Chargement des données en cours.</label>
+    <img src="../../assets/loader.gif"/>
   </div>
 </div>

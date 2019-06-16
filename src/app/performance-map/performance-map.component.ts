@@ -10,6 +10,7 @@ export class PerformanceMapComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Développement du dashboard en Angular grâce aux données récupérées sur l'api de smartleads(Symfony 4). Il servira à centralisé les données pricipales pour les commerciaux et le directeur, concernant l'activité de l'entreprise.
+Développement du dashboard en Angular grâce aux données récupérées sur l'api de smartleads(Symfony 4). Il servira à centraliser les données principales pour les commerciaux et le directeur, concernant l'activité de l'entreprise.
 
 ## Technologies
 Projet utilisant les technologies suivantes:
@@ -33,7 +33,7 @@ Il vous faudra tout d'abord installer 2 outils et le projet smartleads :
 
 Dans le même terminal, il vous suffit d'éxécuter la commande : `ng serve --open`.
 L'application se lancera automatiquement sur votre navigateur internet par défaut.
-Connecter vous ensuite avec les identifiants suivant pour accéder au dashboard :
+Connectez vous ensuite avec les identifiants suivant pour accéder au dashboard :
 - identifiant : `admin@smartleads.fr`
 - mot de passe : `azerty`
 
@@ -64,9 +64,9 @@ First of all you need to install 2 tools :
 - Installation of `node.js` -> [Click here](https://nodejs.org/en/download/).
 - You will need to launch the smartleads project! Indeed, the Angular dashboard will look for data on it! See you on the presentation of the project, and follow the instructions  -> [Cliquer ici](https://github.com/gary-deshayes/projet-smartleads-api).
 
-## Installation du projet :
+## Project installation :
 
-### I / Création du projet
+### I / Project creation
 - Go to the folder of your choice.
 - Open the terminal (command prompt) in the same folder
 - Execute this command : `git clone "https://github.com/vigni/projet-dashboard-smartleads-angular.git"`

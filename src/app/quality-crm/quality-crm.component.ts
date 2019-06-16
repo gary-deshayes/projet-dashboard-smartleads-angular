@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ApiConnectionService } from './../api-connection.service';
+import { Component, OnInit, Input } from '@angular/core';
+import 'apexcharts';
+
 
 @Component({
   selector: 'app-quality-crm',

@@ -10,6 +10,12 @@ import 'apexcharts';
 })
 export class QualityCrmComponent implements OnInit {
 
+  @Input() apiConnection: ApiConnectionService;
+
+  private loading = false;
+  private data: any;
+  private url = "api/contacts/indiceCRM"
+
   constructor() { }
 
   ngOnInit() {
@@ -71,7 +77,6 @@ export class QualityCrmComponent implements OnInit {
     this.apiConnection.getData(this.url).subscribe((dataApi) => {
       this.data = dataApi;
       this.loading = false;
-      console.log(this.data);
 
 
     },

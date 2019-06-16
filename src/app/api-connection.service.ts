@@ -53,7 +53,6 @@ export class ApiConnectionService {
 
       },
       () => {
-        console.log(this.token);
         this.loading = false;
 
       });
@@ -85,5 +84,9 @@ export class ApiConnectionService {
   }
   public setLoading(loading) {
     this.loading = loading;
+  }
+
+  public deconnected(){
+    this.connected = false;
   }
 }

@@ -12,7 +12,6 @@ export class AppComponent  implements OnInit {
   constructor(private apiConnection: ApiConnectionService) { 
     
 
-    console.log(apiConnection.getIfConnected());
 
   }
 

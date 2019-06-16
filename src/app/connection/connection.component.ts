@@ -42,7 +42,5 @@ export class ConnectionComponent implements OnInit {
       this.errorMessage = undefined;
       this.apiConnection.getToken(username, password);
     }
-    console.log(this.error);
-    console.log(this.errorMessage);
   }
 }

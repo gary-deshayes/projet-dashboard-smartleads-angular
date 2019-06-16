@@ -10,12 +10,6 @@ import 'apexcharts';
 })
 export class QualityCrmComponent implements OnInit {
 
-  @Input() apiConnection: ApiConnectionService;
-
-  private loading = false;
-  private data: any;
-  private url = "api/contacts/indiceCRM"
-
   constructor() { }
 
   ngOnInit() {

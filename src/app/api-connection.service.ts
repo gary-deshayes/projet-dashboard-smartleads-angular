@@ -16,10 +16,6 @@ export class ApiConnectionService {
   private lien = "http://127.0.0.1:8000/";
 
   constructor(private http: HttpClient) {
-    if(localStorage.getItem("token") != undefined){
-      this.token = localStorage.getItem("token");
-      this.connected = true;
-    }
 
   }
 
@@ -39,7 +35,6 @@ export class ApiConnectionService {
       if (data.status == 200) {
         this.connected = true;
         this.token = data.body["token"];
-        localStorage.setItem("token", this.token);
       } else {
         this.connected == false;
       }
@@ -71,10 +66,6 @@ export class ApiConnectionService {
 
   public getIfConnected() {
     return this.connected;
-  }
-
-  public deconnected() {
-    this.connected = false;
   }
 
 

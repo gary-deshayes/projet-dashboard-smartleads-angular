@@ -45,3 +45,15 @@ h1 {
 .statsPerf{
     display: flex;
 }
+
+.dash-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px #F5F5F5 solid;
+    padding: 10px 10px 3px;
+
+    h4 {
+        color: #B3B3B3;
+        font-size: 14px;
+    }
+}

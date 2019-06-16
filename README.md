@@ -25,7 +25,7 @@ Il vous faudra tout d'abord installer 2 outils et le projet smartleads :
 - Ouvrir le terminal (invite de commande) de commande dans ce même dossier.
 - Éxécuter la commande ci-contre : `git clone "https://github.com/vigni/projet-dashboard-smartleads-angular.git"`
 - Une fois le dossier créé veuillez vous y rendre et ouvrir de nouveau le terminal de commande dans celui-ci.
-- Éxécuter à présent la commande `-g @angular/cli`
+- Éxécuter à présent la commande `npm -g @angular/cli`
 - Éxécuter à présent la commande `npm install`
  
 
@@ -71,7 +71,7 @@ First of all you need to install 2 tools :
 - Open the terminal (command prompt) in the same folder
 - Execute this command : `git clone "https://github.com/vigni/projet-dashboard-smartleads-angular.git"`
 - Right now go in this folder and open a new terminal.
-- Now, execute this command : `-g @angular/cli`
+- Now, execute this command : `npm -g @angular/cli`
 - Now, execute this command : `-npm install`
 
 ## Your project is ready !

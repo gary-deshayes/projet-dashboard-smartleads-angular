@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'app/app.component';
+@import 'app/dashboard/dashboard.component';
+@import 'app/monitoring/monitoring.component';
+@import 'app/performance-map/performance-map.component';
+
+html {
+    font-size: 12px;
+}
+
+.row {
+    margin: 30px 30px;
+}
+
+i {
+    color: #D9D9D9;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    background-color: transparent;
+    -moz-box-shadow: 0px 1px 5px 0px #dddddd;;
+    -webkit-box-shadow: 0px 1px 5px 0px #dddddd;
+    -o-box-shadow: 0px 1px 5px 0px #dddddd;
+    box-shadow: 0px 1px 5px 0px #dddddd;
+}
+
+.top-title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px 10px;
+    border-bottom: 1px grey solid;
+}

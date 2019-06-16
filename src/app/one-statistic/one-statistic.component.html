@@ -1,0 +1,25 @@
+<div class="content" *ngIf="loading == false else loader">
+  <div class="partSup">
+    <i class="{{logo}}" *ngIf="logo != null"></i>
+    <div *ngIf="data != null">
+      <span class="taux" *ngIf="data.pourcent != undefined">
+        {{data.pourcent}}%
+      </span>
+    </div>
+
+  </div>
+  <span class="effectif" *ngIf="data != null">
+    {{data.value}}
+  </span>
+  <span id="libelle">
+    {{libelle}}
+  </span>
+</div>
+
+<ng-template #loader>
+
+  <div class="content">
+
+    <img src="../../assets/loader.gif" class="img-fluid">
+  </div>
+</ng-template>

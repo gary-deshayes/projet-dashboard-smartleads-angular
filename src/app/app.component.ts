@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { ApiConnectionService } from './api-connection.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
   title = 'projet-dashboard-smartleads-angular';
+
+  constructor(private apiConnection: ApiConnectionService) { 
+    
+
+
+  }
+
+  ngOnInit() {
+  }
 }
